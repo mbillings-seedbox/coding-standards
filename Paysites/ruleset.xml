@@ -3,15 +3,21 @@
     <description>A coding standard based off seedboxtech/coding-standard/Paysites</description>
 
     <!-- include all sniffs in the provided standard -->
-    <rule ref="PSR2"/>
+    <rule ref="PSR12"/>
 
     <!-- START: my standards -->
 
-    <rule ref="Generic.Arrays.DisallowShortArraySyntax"/>
-    <rule ref="PSR2">
-      <exclude name="PSR2.Classes.PropertyDeclaration.Underscore"/>
-      <exclude name="PSR2.Methods.MethodDeclaration.Underscore"/>
-      <exclude name="PSR2.Files.EndFileNewline.NoneFound"/>
+
+    <rule ref="Generic.Arrays"/>
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax">
+      <exclude name="Generic.Arrays.DisallowLongArraySyntax"/>
+    </rule>
+
+    <rule ref="Squiz.Commenting.InlineComment.InvalidEndChar">
+      <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
+    </rule>
+    <rule ref="Squiz.WhiteSpace.MemberVarSpacing.FirstIncorrect">
+      <exclude name="Squiz.WhiteSpace.MemberVarSpacing.FirstIncorrect"/>
     </rule>
 
     <!-- END: my standards -->
